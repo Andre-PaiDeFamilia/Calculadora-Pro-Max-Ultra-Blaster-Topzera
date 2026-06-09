@@ -1,0 +1,88 @@
+
+/* Reseta as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Centraliza tudo na tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+}
+
+/* Caixa da calculadora */
+.calculator {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+/* Visor */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Grid para organizar os botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Estilo padrão dos botões */
+.btn {
+    padding: 20px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #34495e;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #7f8c8d;
+}
+
+/* Botão de limpar (C) ocupa 2 colunas */
+.clear {
+    background-color: #e74c3c;
+    grid-column: span 2;
+}
+
+.clear:hover {
+    background-color: #c0392b;
+}
+
+/* Botão de igual (=) ocupa 2 linhas */
+.equal {
+    background-color: #2ecc71;
+    grid-row: span 2;
+}
+
+.equal:hover {
+    background-color: #27ae60;
+}
+
+/* Botão zero (0) ocupa 2 colunas */
+.zero {
+    grid-column: span 2;
+}
